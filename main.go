@@ -1,6 +1,7 @@
 package main
 
 import (
+	"github.com/pydio/cells/v4/cmd"
 	"github.com/pydio/cells/v4/common"
 
 	// Register minio client for objects storage
@@ -48,7 +49,6 @@ import (
 	_ "github.com/pydio/cells/v4/common/registry/config"
 	_ "github.com/pydio/cells/v4/common/registry/service"
 
-	// Broker
 	_ "github.com/pydio/cells/v4/broker/activity/grpc"
 	_ "github.com/pydio/cells/v4/broker/activity/rest"
 	_ "github.com/pydio/cells/v4/broker/chat/grpc"
@@ -116,6 +116,7 @@ import (
 	_ "github.com/pydio/cells/v4/common/broker/grpcpubsub"
 	_ "github.com/pydio/cells/v4/common/broker/nats"
 	_ "gocloud.dev/pubsub/mempubsub"
+
 	// _ "gocloud.dev/pubsub/natspubsub"
 	_ "gocloud.dev/pubsub/rabbitpubsub"
 
@@ -131,9 +132,7 @@ import (
 	_ "github.com/pydio/cells/v4/common/server/generic"
 	_ "github.com/pydio/cells/v4/common/server/grpc"
 	_ "github.com/pydio/cells/v4/common/server/http"
-
 	// Import Command Package after all Mux Registers
-	"github.com/pydio/cells/v4/cmd"
 )
 
 func main() {

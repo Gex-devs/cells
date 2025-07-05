@@ -22,6 +22,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Media from './Media';
+import vjs from 'video.js';
 
 class Player extends React.Component {
 
@@ -48,7 +49,7 @@ class Player extends React.Component {
             preload: 'auto',
             autoplay: false,
             controls: true,
-            techOrder: ["html5"]
+            // techOrder: ["html5"]
         }
 
         return (

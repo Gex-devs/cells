@@ -7,4 +7,5 @@ const config = configLoader({PydioVideo:'./res/js/index.js'}, path.resolve(__dir
 
 module.exports = () => {
     return config;
+    
 };
