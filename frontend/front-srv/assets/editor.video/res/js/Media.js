@@ -10,7 +10,7 @@ const DEFAULT_WIDTH = "100%";
 const DEFAULT_ASPECT_RATIO = 9 / 16;
 const DEFAULT_ADJUSTED_SIZE = 0;
 const DEFAULT_RESIZE_DEBOUNCE_TIME = 500;
-const DEFAULT_DOMAIN = "https://minecraft.ged-home.space";
+const DEFAULT_DOMAIN = "https://minecraft.ged-home.space/";
 
 const DEFAULT_VIDEO_OPTIONS = {
   preload: "auto",
@@ -19,7 +19,6 @@ const DEFAULT_VIDEO_OPTIONS = {
 };
 
 function noop() {}
-
 class Media extends React.Component {
   static get styles() {
     return {
@@ -68,7 +67,7 @@ class Media extends React.Component {
     const { src, onReady, eventListeners } = this.props;
     console.log(src);
     // let thejson = JSON.stringify({ theinput: src });
-    let newsrc = await (await fetch(DEFAULT_DOMAIN + "input=" + encodeURIComponent(src))).text();
+    let newsrc = await (await fetch(DEFAULT_DOMAIN + "video?input=" + encodeURIComponent(src))).text();
 
     console.log("src: ", newsrc);
 

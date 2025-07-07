@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "ffmpeg": "^0.0.4",
+    "mime": "^4.0.7",
+    "multer": "^2.0.1"
+  }
+}
